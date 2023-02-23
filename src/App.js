@@ -22,7 +22,7 @@ const App = () => {
 
       <div class="hero">
         <div class="hero-inner">
-          <h1>Welcome To My Site!</h1>
+          <h1>Welcome To My Website!!!!</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
             nesciunt accusantium tempora voluptatem velit enim quaerat sapiente
