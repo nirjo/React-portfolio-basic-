@@ -1,11 +1,18 @@
 body {
+  background-color: #fcf6f4;
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
 }
-
+.round {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: green;
+  overflow: hidden;
+}
 .header {
   padding: 0 45px;
-  background-color: #283593;
+  background-color: #fcf6f4;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -14,7 +21,7 @@ body {
 }
 
 .nav a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   display: block;
   transition: all 0.3s ease-out;
@@ -37,7 +44,7 @@ body {
 }
 
 .hero {
-  background-color: #c5cae9;
+  background-color: #316685;
   padding: 60px 45px;
   display: flex;
   justify-content: center;
@@ -60,7 +67,7 @@ body {
 
 .button {
   background-color: #3949ab;
-  color: #fff;
+  color: #f5b921;
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 8px;
@@ -69,7 +76,7 @@ body {
 }
 
 .features {
-  background-color: #e8eaf6;
+  background-color: #b5fac7;
   padding: 60px 45px;
 }
 
@@ -98,6 +105,6 @@ body {
 .footer {
   text-align: center;
   padding: 20px 0;
-  color: #999;
+  color: #000000;
   font-size: 0.9rem;
 }
