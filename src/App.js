@@ -1,134 +1,28 @@
 import react from "react";
 import "./styles.css";
-import mypic from "./asserts/mypic.jpg";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import NavBar from "./components/NavBar";
+import Portfolio from "./components/Pages/Portfolio";
+import About from "./components/Pages/About";
+import Blog from "./components/Pages/Blog";
+import Contact from "./components/Pages/Contact";
 const App = () => {
   return (
-    <div className="App">
-      <div class="header">
-        <img class="round" src={mypic} alt="Italian Trulli" />
-        <ul class="nav">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Portfolio</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-        </ul>
-      </div>
+    <>
+      <Router>
+        <NavBar />
 
-      <div class="hero">
-        <div class="hero-inner">
-          <h1>Welcome To My Site!</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            nesciunt accusantium tempora voluptatem velit enim quaerat sapiente
-            sed, repellat temporibus eaque dignissimos, saepe ab recusandae
-            incidunt fuga veniam vero vitae!
-          </p>
-          <a href="#" class="button">
-            Learn More
-          </a>
+        <div>
+          <Routes>
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </div>
-      </div>
-
-      <div class="features">
-        <div class="features-inner">
-          <div class="featured-item">
-            <h3>Cool Feature #1</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div>
-          <div class="featured-item">
-            <h3>Cool Feature #2</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div>
-          <div class="featured-item">
-            <h3>Cool Feature #3</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div>
-
-          <div class="featured-item">
-            <h3>Cool Feature #4</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div>
-          <div class="featured-item">
-            <h3>Cool Feature #5</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div>
-          <div class="featured-item">
-            <h3>Cool Feature #6</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div>
-          <div class="featured-item">
-            <h3>Cool Feature #7</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div>
-          <div class="featured-item">
-            <h3>Cool Feature #8</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div>
-          {/* <div class="featured-item">
-            <h3>Cool Feature #9</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit
-              cupiditate, ducimus accusamus quaerat numquam odio corporis earum
-              cum harum dolorem.
-            </p>
-          </div> */}
-        </div>
-      </div>
-
-      <div class="footer">
-        <p>&copy; 2020 Fictional Company</p>
-      </div>
-    </div>
+      </Router>
+    </>
   );
 };
 
