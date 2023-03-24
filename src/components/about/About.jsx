@@ -1,8 +1,8 @@
 import React from "react";
- import "./about.css";
+import "./about.css";
 import AboutImg from "../../assets/mypic.png";
 import Info from "./Info";
-import CV from "../../assets/John-Cv.pdf"
+import CV from "../../assets/John-Cv.pdf";
 
 const About = () => {
   return (
@@ -10,11 +10,12 @@ const About = () => {
       <h2 className="section__title">About ME</h2>
 
       <span className="section__subtitle">My introduction</span>
-      <div>
+      <div className="about__container container grid">
         <img src={AboutImg} alt="" className="about__img" />
-        <Info />
+
         <div className="about__data">
-        
+          <Info />
+
           <p className="about__description">
             Frontend developer, I create web pages with UI / UX user interface,
             I have years of experience and many clients are happy with the
