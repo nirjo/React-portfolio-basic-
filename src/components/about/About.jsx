@@ -12,8 +12,9 @@ const About = () => {
       <span className="section__subtitle">My introduction</span>
       <div>
         <img src={AboutImg} alt="" className="about__img" />
+        <Info />
         <div className="about__data">
-          <Info />
+        
           <p className="about__description">
             Frontend developer, I create web pages with UI / UX user interface,
             I have years of experience and many clients are happy with the
