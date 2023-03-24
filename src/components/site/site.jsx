@@ -4,6 +4,7 @@ const site = () => {
   return (
     <div>
         <img src={construct} alt="Logo" />;
+        
     </div>
   )
 }
