@@ -1,22 +1,22 @@
 import React from 'react';
 import './App.css';
  import Header from './components/header/Header'
- import Home from './components/home/Home'
+//  import Home from './components/home/Home'
 
- import Skills from './components/skills/Skills';
- import About from './components/about/About'
+//  import Skills from './components/skills/Skills';
+//  import About from './components/about/About'
 //  import Contact from './components/contact/Contact'
-//  import Site from './components/site/site';
+  import Site from './components/site/site';
 const  App =()=> {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main className="main">
-     {/* <Site />  */}
-         <Home />
+      <Site />  
+         {/* <Home />
          <About />
-         <Skills />
+         <Skills /> */}
     </main>
     </>
 
