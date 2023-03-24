@@ -61,6 +61,10 @@
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
+
+    .show-menu {
+       bottom: 0; 
+    }
     .nav__list{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -80,6 +84,9 @@
 .nav__Close:hover{
     color:var(--title-color-dark)
 }
+.nav__toggle{
+    font-size: 1.1rem;
+}
     .nav__icon,
     .nav__close,
     .nav__toggle{
@@ -87,3 +94,17 @@
     }
   }
   
+@media screen and (max-width: 576px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}

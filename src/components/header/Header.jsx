@@ -1,16 +1,19 @@
-import React from "react";
+import React , { useState } from "react";
 import "./header.css";
 
-const header = () => {
+const Header = () => {
+
+const [Toggle, ShowMenu] = useState(false)
+
+
   return (
-    <div>
       <header className="header">
         <nav className="nav container">
           <a href="index.html" className="nav__logo">
             Nirmal
           </a>
 
-          <div className="nav__menu">
+          <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul li className="nav__list grid">
               <li li className="nav__item">
                 <a href="#Home" className="nav__link" active-link>
@@ -62,15 +65,16 @@ const header = () => {
 
             </ul>
 
-            <i class="uil uil-times nav__close"></i>
+            <i class="uil uil-times nav__close" onClick={()=>{
+              ShowMenu(!Toggle)
+            }}></i>
           </div>
-          <div className="nav__toggle">
+          <div className="nav__toggle" onClick={()=>ShowMenu(!Toggle)}>
             <i class="uil uil-apps"></i>
           </div>
         </nav>
       </header>
-    </div>
   );
 };
 
-export default header;
+export default Header;
