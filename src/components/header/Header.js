@@ -11,9 +11,9 @@ const header = () => {
 <ul li className='nav__list grid' >
     <li li className='nav__item' >
     
-    <a href='' className='nav__link'>Home
+    {/* <a>Home
     <i className='uil uil- nav__icon'></i>
-    </a>
+    </a> */}
     
     </li>
 </ul>
