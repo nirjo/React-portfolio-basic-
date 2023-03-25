@@ -7,8 +7,9 @@ import "./App.css";
  import About from "./components/about/About";
  import Contact from "./components/contact/Contact";
  import Qualification from "./components/qualification/Qualification";
- import Footer from "./components/footer/Footer";
+//  import Footer from "./components/footer/Footer";
 // import Site from "./components/site/site";
+
 const App = () => {
   return (
     <>
@@ -20,7 +21,7 @@ const App = () => {
         <Skills />
         <Qualification />
         <Contact />
-        <Footer /> 
+        {/* <Footer />  */}
       </main>
     </>
   );
