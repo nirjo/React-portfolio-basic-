@@ -19,7 +19,7 @@ const Header = () => {
         <header className="header">
             <nav className="nav container">
                 <a href="index.html" className="nav__logo">
-                    Nirmal
+                    NirmalRaj
                 </a>
 
                 <div className={
