@@ -8,12 +8,8 @@ const Contact = () => {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('service_cyjqkar', 'template_nvr3mss', form.current, '2zFPl_Lh0EnghZkKz')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
+      emailjs.sendForm('service_4kw216y', 'template_nvr3mss', form.current, '2zFPl_Lh0EnghZkKz')
+      e.target.reset()
     };
 
 
@@ -78,7 +74,7 @@ const Contact = () => {
               <label className="contact__form-tag">Name</label>
               <input
                 type="text"
-                name="user_name" 
+                name="name" 
                 className="contact__form-input"
                 placeholder="insert your name"
               />
@@ -88,7 +84,7 @@ const Contact = () => {
               <label className="contact__form-tag">Email</label>
               <input
                 type="email"
-                name="user_email"
+                name="email"
                 className="contact__form-input"
                 placeholder="insert your email"
               />
@@ -97,7 +93,7 @@ const Contact = () => {
             <div className="contact__form-div contact_form-area">
               <label className="contact__form-tag">Projects</label>
               <textarea
-                name="message"
+                name="project"
                 cols="30"
                 row="10"
                 className="contact__form-input"
