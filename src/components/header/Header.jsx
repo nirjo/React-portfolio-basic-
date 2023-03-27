@@ -3,11 +3,11 @@ import "./header.css";
 
 const Header = () => { /* Change Background Header*/
     window.addEventListener('scroll', function () {
-        const headerid = document.querySelector(".header");
+        const header = document.querySelector(".header");
         if (this.scrollY >= 800) 
-        headerid.classList.add("show-scroll");
+            header.classList.add("show-scroll");
          else 
-         headerid.classList.remove("show-scroll");
+            header.classList.remove("show-scroll");
         
     })
     /* Toggle Menu*/

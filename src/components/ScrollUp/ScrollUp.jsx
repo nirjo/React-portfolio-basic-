@@ -3,10 +3,10 @@ import './scrollUp.css';
 
 const ScrollUp = () => {
     window.addEventListener('scroll',function (){
-        const scrollupid = document.querySelector(".scrollup");
-        if(this.scrollY >= 560) scrollupid.classList.add
+        const scrollup = document.querySelector(".scrollup");
+        if(this.scrollY >= 560) scrollup.classList.add
         ("show-scroll");
-        else scrollupid.classList.remove("show-scroll");
+        else scrollup.classList.remove("show-scroll");
     })
   return (
     <a href="#" className="scrollup">

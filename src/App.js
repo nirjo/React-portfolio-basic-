@@ -15,18 +15,18 @@ import Site from "./components/site/site";
 const App = () => {
   return (
     <>
-       {/* <Header />   */}
+      <Header />
       <main className="main">
-           <Site />      
-         {/* <Home />
+        {/* <Site />       */}
+        <Home />
         <About />
-        <Skills /> 
-        <Qualification />  */}
-        {/* <Work />   */}
-         {/* <Contact />   */}
+        <Skills />
+        <Qualification />
+        <Work />
+        <Contact />
       </main>
-      {/* <Footer />  */}
-      <ScrollUp /> 
+      <Footer />
+      <ScrollUp />
     </>
   );
 };
