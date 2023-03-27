@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import "./header.css";
 
-const Header = () => { /* Change Background Header*/
+const Header = () => { 
+    /* Change Background Header*/
     window.addEventListener('scroll', function () {
         const header = document.querySelector(".header");
         if (this.scrollY >= 800) 

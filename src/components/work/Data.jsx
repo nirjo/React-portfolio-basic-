@@ -1,9 +1,9 @@
 
-import Work1 from "../../assets/Work1"
-import Work2 from "../../assets/Work2"
-import Work3 from "../../assets/Work3"
-import Work4 from "../../assets/Work4"
-import Work5 from "../../assets/Work5"
+import Work1 from "../../assets/work1.jpg";
+import Work2 from "../../assets/work2.jpg";
+import Work3 from "../../assets/work3.jpg";
+import Work4 from "../../assets/work4.jpg";
+import Work5 from "../../assets/work5.jpg";
 
 export const projectsData = [
     {
@@ -44,7 +44,7 @@ export const projectsData = [
 
     },
     {
-        name:'web',
+        name:'Web',
 
     },
     {
