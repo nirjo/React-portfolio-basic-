@@ -18,7 +18,7 @@ import DarkMode from "./DarkMode";
 const App = () => {
   return (
     <>
-     <DarkMode />
+     {/* <DarkMode /> */}
       <Header />
       <main className="main">
         {/* <Site />        */}
