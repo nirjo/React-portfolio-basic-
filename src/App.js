@@ -1,36 +1,36 @@
 import React from "react";
 import "./App.css";
-// import Header from "./components/header/Header";
-// import Home from "./components/home/Home";
+ import Header from "./components/header/Header";
+ import Home from "./components/home/Home";
 
-// import Skills from "./components/skills/Skills";
-// import About from "./components/about/About";
-// import Contact from "./components/contact/Contact";
-// import Services from "./components/services/Services";
-// import Qualification from "./components/qualification/Qualification";
-// import Work from "./components/work/Work";
+ import Skills from "./components/skills/Skills";
+ import About from "./components/about/About";
+ import Contact from "./components/contact/Contact";
+ import Services from "./components/services/Services";
+ import Qualification from "./components/qualification/Qualification";
+ import Work from "./components/work/Work";
 import ScrollUp from "./components/ScrollUp/ScrollUp";
-import Site from "./components/site/site";
-// import Footer from "./components/footer/Footer";
+// import Site from "./components/site/site";
+ import Footer from "./components/footer/Footer";
 
-// import Testimonial from "./components/testimonial/Testimonial";
+ import Testimonial from "./components/testimonial/Testimonial";
 
 const App = () => {
   return (
     <>
-      {/* <Header /> */}
+       <Header /> 
       <main className="main">
-         <Site />       
-        {/* <Home />
+         {/* <Site />        */}
+         <Home />
         <About />
-        <Skills /> */}
-        {/* <Services /> */}
-        {/* <Qualification />
+        <Skills /> 
+         <Services /> 
+         <Qualification />
         <Work />
         <Testimonial />
-        <Contact /> */}
+        <Contact /> 
       </main>
-      {/* <Footer /> */}
+      <Footer /> 
       <ScrollUp />
     </>
   );
