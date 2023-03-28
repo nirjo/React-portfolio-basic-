@@ -11,30 +11,36 @@ export const projectsData = [
       image: Work1,
       title: "Web design",
       category: "web",
+     link:"https://nirmalraj.netlify.app/"
+  
     },
     {
       id: 2,
       image: Work2,
       title: "App movil",
       category: "app",
+      link:"https://ns-react-moviez.netlify.app/"
     },
     {
       id: 3,
       image: Work3,
       title: "Brand design",
       category: "design",
+      link:"https://nj-todoapp-js.netlify.app/"
     },
     {
       id: 4,
       image: Work4,
       title: "App movil",
       category: "app",
+      link:"https://codebucks.hashnode.dev/react-hamburger-menu"
     },
     {
       id: 5,
       image: Work5,
       title: "Web design",
       category: "web",
+      link:"https://codebucks.hashnode.dev/react-hamburger-menu"
     },
   ];
 

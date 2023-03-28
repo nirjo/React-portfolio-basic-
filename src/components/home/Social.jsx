@@ -4,19 +4,19 @@ const Social = () => {
   return (
     <div className="home__social">
       <a
-        href="https://www.instagram.com/"
+        href="nirmalraj.netlify.app/"
         className="home__social-icon"
         target="_blank" rel="noreferrer"
       >
-        <i class="uil uil-instagram"></i>
+        <i class="uil uil-user"></i>
       </a>
       <a
-        href="https://dribbble.com/"
+        href="https://www.linkedin.com/in/nirmalraj-joseph-390614ba/"
         className="home__social-icon"
         target="
         _blank" rel="noreferrer"
       >
-        <i class="uil uil-dribbble"></i>
+        <i class="uil uil-linkedin-alt"></i>
       </a>
       <a
         href="https://github.com/"

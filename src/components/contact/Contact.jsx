@@ -24,7 +24,7 @@ const Contact = () => {
 
           <div className="contact__info">
             <div className="contact__card">
-              <i class="bx bxl-gmail contact__card-icon"></i>
+              <i className="bx bxl-gmail contact__card-icon"></i>
 
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">nirmalraj.joseph86@gmail.com</span>
@@ -38,7 +38,7 @@ const Contact = () => {
               </a>
             </div>
             <div className="contact__card">
-              <i class='bx bxl-whatsapp contact__card-icon'></i>
+              <i className='bx bxl-whatsapp contact__card-icon'></i>
 
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-data">+91-9791277201</span>
@@ -52,7 +52,7 @@ const Contact = () => {
               </a>
             </div>
             <div className="contact__card">
-              <i class="bx bxl-messenger contact__card-icon"></i>
+              <i className="bx bxl-messenger contact__card-icon"></i>
 
               <h3 className="contact__card-title">Messenger</h3>
               <span className="contact__card-data">user.fb123</span>
@@ -105,7 +105,7 @@ const Contact = () => {
             className="button button--flex" >
         Send Message
         <svg
-                  class="button__icon"
+                  className="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"

@@ -10,6 +10,12 @@ justify-content: center;
     border-radius: 1.25rem;
     
 }
+.skill__description{
+  display: flex;
+  justify-content: center;
+  max-width: initial;
+  margin-bottom: var(--mb-2-5);
+}
 .skills__title{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);

@@ -30,7 +30,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i class="bx bxl-facebook"></i>
+            <i className="bx bxl-facebook"></i>
           </a>
           <a
             href="https://www.instagram.com/"
@@ -39,7 +39,7 @@ const Footer = () => {
         _blank"
             rel="noreferrer"
           >
-            <i class="bx bxl-instagram"></i>
+            <i className="bx bxl-instagram"></i>
           </a>
           <a
             href="https://twitter.com/"
@@ -47,7 +47,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i class=" bx bxl-twitter"></i>
+            <i className=" bx bxl-twitter"></i>
           </a>
         </div>
         <span className="footer__copy">
