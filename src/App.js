@@ -6,9 +6,9 @@ import "./App.css";
  import Skills from "./components/skills/Skills";
  import About from "./components/about/About";
  import Contact from "./components/contact/Contact";
- import Services from "./components/services/Services";
+//  import Services from "./components/services/Services";
  import Qualification from "./components/qualification/Qualification";
-//  import Work from "./components/work/Work";
+ import Work from "./components/work/Work";
 import ScrollUp from "./components/ScrollUp/ScrollUp";
 // import Site from "./components/site/site";
  import Footer from "./components/footer/Footer";
@@ -24,9 +24,9 @@ const App = () => {
          <Home />
         <About />
         <Skills /> 
-         <Services /> 
+         {/* <Services />  */}
          <Qualification />
-        {/* <Work /> */}
+         <Work /> 
         <Testimonial />
         <Contact /> 
       </main>
