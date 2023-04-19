@@ -9,7 +9,7 @@ export const projectsData = [
     {
       id: 1,
       image: Work1,
-      title: "Web design",
+      title: "Portfolio Website",
       category: "web",
      link:"https://nirmalraj.netlify.app/"
   
@@ -17,15 +17,15 @@ export const projectsData = [
     {
       id: 2,
       image: Work2,
-      title: "App movil",
+      title: "Movie Website",
       category: "app",
       link:"https://ns-react-moviez.netlify.app/"
     },
     {
       id: 3,
       image: Work3,
-      title: "Brand design",
-      category: "design",
+      title: "Todo Application",
+      category: "app",
       link:"https://nj-todoapp-js.netlify.app/"
     },
     {
