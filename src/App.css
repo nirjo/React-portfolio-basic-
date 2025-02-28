@@ -130,13 +130,36 @@ img {
   margin-bottom: 4rem;
 }
 
+/* .section__title,
+.section__subtitle {
+  text-align: center;
+} */
+@keyframes rainbow {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
 .section__title,
 .section__subtitle {
   text-align: center;
+  background-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent; /* Makes the text color transparent so the gradient shows */
+  background-size: 300% 100%; /* Expands the gradient for animation */
+  animation: rainbow 3s linear infinite; /* Applies the animation */
 }
 
+
 /*=============== LAYOUT ===============*/
-.container {
+/* .container {
   max-width: 968px;
   margin-left: auto;
   margin-right: auto;
@@ -145,6 +168,22 @@ img {
 .grid {
   display: grid;
   gap: 1.5rem;
+} */
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f0ebe9; /* Light gray background */
+  padding: 1.5rem; /* Add padding for spacing */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  background-color: #e1abec; /* White background */
+  padding: 1rem; /* Add some spacing inside the grid */
+  border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 /*=============== BUTTONS ===============*/
@@ -216,5 +255,6 @@ img {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
+  
 }
 

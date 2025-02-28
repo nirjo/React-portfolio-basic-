@@ -2,6 +2,8 @@ import React from "react";
 import "./skills.css";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
+import Cloud from "./Cloud";
+import Learnings from "./Learnings";
 
 const skills = () => {
   return (
@@ -26,6 +28,8 @@ VScode, Github etc.
       <div className="skills__container container grid">
         <Frontend />
         <Backend />
+        <Cloud />
+        <Learnings />
       </div>
     </section>
   );

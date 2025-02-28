@@ -1,3 +1,7 @@
+.home {
+    background-color: #f5f5f5; /* Change this to any color */
+  }
+
 .home__container {
     row-gap: 7rem;
 }
