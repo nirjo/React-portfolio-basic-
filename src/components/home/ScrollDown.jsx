@@ -54,3 +54,74 @@ const ScrollDown = () => {
 }
 
 export default ScrollDown
+// import React from 'react';
+// import { Box, Typography } from '@mui/material';
+// import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
+// const ScrollDown = () => {
+//   return (
+//     <Box display="flex" alignItems="center" mt={4}>
+//       <Typography variant="body2" mr={1} color="text.secondary">
+//         Scroll Down
+//       </Typography>
+//       <KeyboardArrowDownIcon color="action" />
+//     </Box>
+//   );
+// };
+
+// export default ScrollDown;
+// import React from 'react';
+// import { Box, Typography, IconButton } from '@mui/material';
+// import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
+// const ScrollDown = () => {
+//   const handleScroll = () => {
+//     const target = document.getElementById('target-section');
+//     if (target) {
+//       target.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
+
+//   return (
+//     <Box display="flex" alignItems="center" mt={4} onClick={handleScroll} sx={{ cursor: 'pointer' }}>
+//       <Typography variant="body2" mr={1} color="text.secondary">
+//         Scroll Down
+//       </Typography>
+//       <KeyboardArrowDownIcon color="action" />
+//     </Box>
+//   );
+// };
+
+// export default ScrollDown;
+// import React from 'react';
+// import { Box, Typography } from '@mui/material';
+// import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
+// const ScrollDown = () => {
+//   const handleScroll = () => {
+//     const target = document.getElementById('target-section');
+//     if (target) {
+//       const yOffset = -60; // Adjust if you have a fixed header
+//       const yPosition = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+//       window.scrollTo({ top: yPosition, behavior: 'smooth' });
+//     }
+//   };
+
+//   return (
+//     <Box
+//       display="flex"
+//       alignItems="center"
+//       mt={4}
+//       onClick={handleScroll}
+//       sx={{ cursor: 'pointer' }}
+//     >
+//       <Typography variant="body2" mr={1} color="text.secondary">
+//         Scroll Down
+//       </Typography>
+//       <KeyboardArrowDownIcon color="action" />
+//     </Box>
+//   );
+// };
+
+// export default ScrollDown;

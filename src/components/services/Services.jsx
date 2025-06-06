@@ -1,133 +1,105 @@
-import React, {useState} from "react";
-import './services.css'
-
+ import React, { useState } from "react";
+import {
+  Box,
+  Typography,
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  IconButton
+} from "@mui/material";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Services = () => {
+  const [open, setOpen] = useState(false);
 
-    const [toggleState, setToggleState] = useState(1);
+  const handleToggle = () => {
+    setOpen(!open);
+  };
 
-    const toggleTab = (index) => {
-        setToggleState(index);
-    };
+  return (
+    <Box component="section" id="services" py={8}>
+      <Typography variant="h4" color="primary"
+ align="center" gutterBottom>
+        Services
+      </Typography>
+      <Typography variant="subtitle1" align="center" gutterBottom>
+        What I offer
+      </Typography>
 
-    return (
-        <section className="services section" id="services">
-            <h2 className="section__title">Services</h2>
-            <span className="section__subtitle">What I offer</span>
+      <Box display="flex" justifyContent="center" mt={4}>
+        <Box textAlign="center" p={3} border={1} borderRadius={2} maxWidth={320}>
+          <Typography variant="h6" gutterBottom>
+            Frontend Developer
+          </Typography>
+          <Button variant="contained" onClick={handleToggle} endIcon={<CheckCircleIcon />}>
+            View More
+          </Button>
+        </Box>
+      </Box>
 
-            <div className="services__container container grid">
-                <div className="services__content">
-                    <div>
-                        <i className='uil uil-check-circle '></i>
-                        <h3 className="services__title">
-                            Product
-                            <br></br>
-                            Designer
-
-                        </h3>
-                    </div>
-                    <span className="services__button"
-                        onClick={
-                            () => toggleTab(1)
-                    }>
-                        View More
-                        <i className="uil uil-arrow-right services__button-icon"></i>
-                    </span>
-                    </div>
-
-                 {/* <div className="services__content">
-                    <div>
-                        <i className="uil uil-arrow services__icon"></i>
-                        <h3 className="services__title">
-
-                            Ui/Ux
-                            <br></br>
-                            Designer
-                        </h3>
-                    </div>
-                    <span onClick={
-                            () => toggleTab(2)
-                    }
-                        className="services__button">
-                        View More
-                        <i className="uil uil-arrow-right services__button-icon"></i>
-                    </span>
-                  </div> */}
-                     <div className={
-                        toggleState === 2 ? "services__modal active-modal" : "services-modal"
-                    }>
-                        <div className="services__modal-content">
-                            <i onClick={
-                                    () => toggleTab(0)
-                                }
-                                className="uil uil-times services__modal-close"></i>
-                            <h3 className="services__modal-title">
-                                UI/UX -Designer</h3>
-                            <p className="services_modal-description">
-                                Service with more than 3 years of experience.Providing quality
-                                                work to clients and companies.
-                            </p>
-                            <ul className="services__modal-services grid">
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle
-                                                         services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I develop the user interface.
-                                    </p>
-                                </li>
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle
-                                                         services__modal-icon"></i>
-                                    <p className="services__modal-info">Web page development</p>
-                                </li>
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle
-                                                         services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I create ux element interactions
-                                    </p>
-                                </li>
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle
-                                                         services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        I position your company brand
-                                    </p>
-                                </li>
-                                <li className="services__modal-service">
-                                    <i className="uil uil-check-circle
-                                                         services__modal-icon"></i>
-                                    <p className="services__modal-info">
-                                        Design and mockups of products for
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> 
-                {/* <div className="services__content">
-                    <div>
-                        <i className="uil uil-edit services__icon"></i>
-                        <h3 className="services__title">
-                            Visual
-                            <br></br>
-                            Designer
-                        </h3>
-                    </div>
-                    <span onClick={
-                            () => toggleTab(3)
-                    }
-                        className="services__button">
-                        View More
-                        <i className="uil uil-arrow-right services__button-icon"></i>
-                    </span>
-          </div> */}
-                 
-            
-          
-        </section>
-    );
+      <Dialog open={open} onClose={handleToggle} fullWidth maxWidth="sm">
+        <DialogTitle sx={{ m: 0, p: 2 }}>
+          UI/UX Designer
+          <IconButton
+            aria-label="close"
+            onClick={handleToggle}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500]
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent dividers>
+          <DialogContentText gutterBottom>
+            Service with more than 3 years of experience. Providing quality work to clients and companies.
+          </DialogContentText>
+          <List>
+            <ListItem>
+              <ListItemIcon>
+                <CheckCircleIcon color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="I develop the user interface." />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <CheckCircleIcon color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Web page development" />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <CheckCircleIcon color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="I create UX element interactions" />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <CheckCircleIcon color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="I position your company brand" />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <CheckCircleIcon color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Design and mockups of products" />
+            </ListItem>
+          </List>
+        </DialogContent>
+      </Dialog>
+    </Box>
+  );
 };
 
 export default Services;
-

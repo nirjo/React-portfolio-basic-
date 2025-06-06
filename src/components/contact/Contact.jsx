@@ -1,132 +1,133 @@
-import React  ,{useRef}from "react";
+import React, { useRef, useState } from 'react';
+import {
+  Box,
+  Grid,
+  Typography,
+  TextField,
+  Button,
+  Card,
+  CardContent,
+  CardActions,
+  Link,
+  Snackbar,
+  Alert
+} from '@mui/material';
+import { Email, WhatsApp, Send } from '@mui/icons-material';
 import emailjs from '@emailjs/browser';
 
-import './contact.css'
 const Contact = () => {
-    const form = useRef();
+  const form = useRef();
+  const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_4kw216y', 'template_nvr3mss', form.current, '2zFPl_Lh0EnghZkKz')
-      e.target.reset()
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Use FormData to extract values
+    const formData = new FormData(form.current);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const project = formData.get('project');
+
+    // Send these details using EmailJS
+    const templateParams = {
+      name: name,
+      email: email,
+      project: project,
     };
 
+    // EmailJS send to owner (you), not to user
+    emailjs.send('service_cp4o2kp', 'template_7o9nvvb', templateParams, 'XjVS4wLOn98YajBSE')
+      .then(() => {
+        setSnackbar({ open: true, message: 'Message sent successfully!', severity: 'success' });
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error(error.text);
+        setSnackbar({ open: true, message: 'Message failed. Please try again.', severity: 'error' });
+      });
+  };
 
   return (
-    <section className="contact section" id="contact">
-      <h2 className="section__title">Get in Touch</h2>
-      <span className="section__subtitle">Contact Me</span>
+    <Box component="section" id="contact" sx={{ py: 8, px: 2 }}>
+      <Typography variant="h4" color="primary" align="center" gutterBottom>
+        Get in Touch
+      </Typography>
+      <Typography variant="subtitle1" align="center" gutterBottom>
+        Contact Me
+      </Typography>
 
-      <div className="contact__container container grid">
-        <div className="contact__content">
-          <h3 className="contact__title">Talk to me</h3>
+      <Grid container spacing={4} justifyContent="center">
+        <Grid item xs={12} md={5}>
+          <Typography variant="h6" gutterBottom>Talk to me</Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Card variant="outlined">
+                <CardContent>
+                  <Email color="primary" fontSize="large" />
+                  <Typography variant="h6">Email</Typography>
+                  <Typography variant="body2">nirmalraj.joseph86@gmail.com</Typography>
+                </CardContent>
+                <CardActions>
+                  <Link href="mailto:nirmalraj.joseph86@gmail.com" underline="hover" target="_blank">
+                    Write me
+                  </Link>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item xs={12}>
+              <Card variant="outlined">
+                <CardContent>
+                  <WhatsApp color="success" fontSize="large" />
+                  <Typography variant="h6">WhatsApp</Typography>
+                  <Typography variant="body2">+91-9791277201</Typography>
+                </CardContent>
+                <CardActions>
+                  <Link
+                    href="https://api.whatsapp.com/send?phone=919791277201&text=Hello, more information!"
+                    underline="hover"
+                    target="_blank"
+                  >
+                    Write me
+                  </Link>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Grid>
+        </Grid>
 
-          <div className="contact__info">
-            <div className="contact__card">
-              <i className="bx bxl-gmail contact__card-icon"></i>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h6" gutterBottom>Write me your projects</Typography>
+          <Box component="form" ref={form} onSubmit={sendEmail} noValidate autoComplete="off">
+            <TextField fullWidth margin="normal" name="name" label="Name" variant="outlined" required />
+            <TextField fullWidth margin="normal" name="email" label="Email" type="email" variant="outlined" required />
+            <TextField
+              fullWidth
+              margin="normal"
+              name="project"
+              label="Project Details"
+              multiline
+              rows={4}
+              variant="outlined"
+              required
+            />
+            <Button variant="contained" type="submit" endIcon={<Send />} sx={{ mt: 2 }}>
+              Send Message
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
 
-              <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">nirmalraj.joseph86@gmail.com</span>
-
-              <a
-                href="mailto:examplemail@gmail.com.com"
-                className="contact__button"
-              >
-                Write me
-                <i className="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
-            <div className="contact__card">
-              <i className='bx bxl-whatsapp contact__card-icon'></i>
-
-              <h3 className="contact__card-title">Whatsapp</h3>
-              <span className="contact__card-data">+91-9791277201</span>
-
-              <a
-                href="https://api.whatsapp.com/send?phone=62214408789&text=Hello, more information!"
-                className="contact__button"
-              >
-                Write me
-                <i className="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
-            <div className="contact__card">
-              <i className="bx bxl-messenger contact__card-icon"></i>
-
-              <h3 className="contact__card-title">Messenger</h3>
-              <span className="contact__card-data">user.fb123</span>
-
-              <a href="https://m.me/crypticalcoder" className="contact__button">
-                Write me
-                <i className="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-     
-
-      <div className="contact__container container grid">
-        <div className="contact__content">
-          <h3 className="contact__title">Write me your projects</h3>
-          <form ref={form} onSubmit={sendEmail} className="contact__form" >
-            <div className="contact__form-div">
-              <label className="contact__form-tag">Name</label>
-              <input
-                type="text"
-                name="name" 
-                className="contact__form-input"
-                placeholder="insert your name"
-              />
-             
-            </div>
-            <div className="contact__form-div">
-              <label className="contact__form-tag">Email</label>
-              <input
-                type="email"
-                name="email"
-                className="contact__form-input"
-                placeholder="insert your email"
-              />
-             
-            </div>
-            <div className="contact__form-div contact_form-area">
-              <label className="contact__form-tag">Projects</label>
-              <textarea
-                name="project"
-                cols="30"
-                row="10"
-                className="contact__form-input"
-                placeholder="Write your project"
-              ></textarea>
-            </div>
-            <button 
-            type="submit" value="Send" 
-            className="button button--flex" >
-        Send Message
-        <svg
-                  className="button__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z"
-                    fill="#000"
-                  ></path>
-                  <path
-                    d="M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z"
-                    fill="var(--container-color)"
-                  ></path>
-                </svg>
-                </button>
-          </form>
-        </div>
-      </div>
-      </div>
-    </section>
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={5000}
+        onClose={() => setSnackbar({ ...snackbar, open: false })}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert severity={snackbar.severity} sx={{ width: '100%' }}>
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
+    </Box>
   );
 };
 

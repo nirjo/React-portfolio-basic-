@@ -1,0 +1,26 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "title": "React Movie App",
+        "category": "Web",
+        "image": "https://via.placeholder.com/400x250?text=React+Movie+App",
+        "link": "https://ns-react-moviez.netlify.app/"
+      },
+      {
+        "id": 2,
+        "title": "Portfolio Site",
+        "category": "Design",
+        "image": "https://via.placeholder.com/400x250?text=Portfolio+Design",
+        "link": "https://example.com"
+      },
+      {
+        "id": 3,
+        "title": "Mobile App UI",
+        "category": "App",
+        "image": "https://via.placeholder.com/400x250?text=Mobile+UI",
+        "link": "https://example.com"
+      }
+    ]
+  }
+  

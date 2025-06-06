@@ -1,31 +1,20 @@
-import React from "react";
+// import React from 'react';
+import { Box, IconButton } from '@mui/material';
+import { GitHub, LinkedIn, Twitter } from '@mui/icons-material';
 
 const Social = () => {
   return (
-    <div className="home__social">
-      <a
-        href="nirmalraj.netlify.app/"
-        className="home__social-icon"
-        target="_blank" rel="noreferrer"
-      >
-        <i class="uil uil-user"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/nirmalraj-joseph-390614ba/"
-        className="home__social-icon"
-        target="
-        _blank" rel="noreferrer"
-      >
-        <i class="uil uil-linkedin-alt"></i>
-      </a>
-      <a
-        href="https://github.com/"
-        className="home__social-icon"
-        target="_blank"  rel="noreferrer"
-      >
-        <i class="uil uil-github-alt"></i>
-      </a>
-    </div>
+    <Box display="flex" flexDirection="column" gap={2}>
+      <IconButton color="primary" href="https://github.com/nirjo" target="_blank">
+        <GitHub />
+      </IconButton>
+      <IconButton color="primary" href="https://www.linkedin.com/in/nirmalraj-joseph-390614ba/" target="_blank">
+        <LinkedIn />
+      </IconButton>
+      <IconButton color="primary" href="https://twitter.com/yourprofile" target="_blank">
+        <Twitter />
+      </IconButton>
+    </Box>
   );
 };
 

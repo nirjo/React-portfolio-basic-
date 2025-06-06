@@ -107,3 +107,33 @@
         column-gap: 0.25rem;
      }
     }
+
+    .work__filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      
+      .work__filter-button {
+        padding: 0.5rem 1.2rem;
+        border: none;
+        background-color: #eee;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .work__filter-button.active,
+      .work__filter-button:hover {
+        background-color: #007bff;
+        color: white;
+      }
+      
+      .work__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      

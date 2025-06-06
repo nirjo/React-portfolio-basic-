@@ -10,7 +10,7 @@ export const projectsData = [
       id: 1,
       image: Work1,
       title: "Portfolio Website",
-      category: "web",
+      category: "app",
      link:"https://nirmalraj.netlify.app/"
   
     },
@@ -18,28 +18,28 @@ export const projectsData = [
       id: 2,
       image: Work2,
       title: "Movie Website",
-      category: "app",
+      category: "web",
       link:"https://ns-react-moviez.netlify.app/"
     },
     {
       id: 3,
       image: Work3,
       title: "Todo Application",
-      category: "app",
+      category: "web",
       link:"https://nj-todoapp-js.netlify.app/"
     },
     {
       id: 4,
       image: Work4,
       title: "App movil",
-      category: "app",
+      category: "design",
       link:"https://codebucks.hashnode.dev/react-hamburger-menu"
     },
     {
       id: 5,
       image: Work5,
       title: "Web design",
-      category: "web",
+      category: "design",
       link:"https://codebucks.hashnode.dev/react-hamburger-menu"
     },
   ];

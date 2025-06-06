@@ -4,5 +4,6 @@
         "Nirmalraj",
         "Nirmalraj's",
         "nirmalrajresume"
-    ]
+    ],
+    "DockerRun.DisableDockerrc": true
 }
